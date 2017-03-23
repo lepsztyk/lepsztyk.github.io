@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <TITLE>GeoJSON</TITLE>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="assets/gjason.js" type="text/javascript"></script>
+
+  </head>
+<body>
+  <div id="map" style="width: 600px; height: 400px;"></div>
+  <script>
+  
+  
+var map = L.map('map').setView([53.483749 , 18.753565], 6);
+         L.tileLayer('https://api.mapbox.com/styles/v1/lepsztyk/cj0lgzzkv006i2qjrpoauoq1m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGVwc3p0eWsiLCJhIjoiY2owbGd5dGR6MDAxNDJ3bWRlbWtxcWNreiJ9.cu4OUCiLbVZ8UTsRMP1uag', {
+            maxZoom: 16,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          //  id: 'lepsztyk',
+           // accessToken: 'pk.eyJ1IjoibGVwc3p0eWsiLCJhIjoiY2owbGd5dGR6MDAxNDJ3bWRlbWtxcWNreiJ9.cu4OUCiLbVZ8UTsRMP1uag'
+        }).addTo(map);
+ 
+ 
+ var gdanskPopup = "Uniwerystet Gdanski";
+ var gdanskMarker = L.geoJSON(gdansk);
+ gdanskMarker.bindPopup(gdanskPopup);
+ gdanskMarker.addTo(map);
+ 
+ var domPopup = "Dom";
+ var domMarker = L.geoJSON(dom);
+ domMarker.bindPopup(domPopup);
+ domMarker.addTo(map);
+ 
+ var trasaPopup = "Z Uniwerystetu do domu";
+ var trasaMarker = L.geoJSON(trasa);
+ trasaMarker.bindPopup(trasaPopup);
+ trasaMarker.addTo(map);
+ 
+ var rodzinaPopup = "Moje rodzinne okolice";
+ var rodzinaMarker = L.geoJSON(rodzina);
+ rodzinaMarker.bindPopup(rodzinaPopup);
+ rodzinaMarker.addTo(map);
+ 
+  </script>
+ </body>
+<html>
