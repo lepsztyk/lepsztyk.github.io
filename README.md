@@ -1,1 +1,2 @@
-# lepsztyk.github.io
+Bartosz Lepieszkiewicz
+Kamil Litkowski
