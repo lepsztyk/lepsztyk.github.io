@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsywne obrazki</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+    <div id="main">
+    <picture>
+    	<source srcset="https://dummyimage.com/600x480/1919e6/d6d7e8.jpg" media="(max-width: 480px)">
+    	<source srcset="https://dummyimage.com/1024x768/eb1559/d6d7e8.jpg" media="(max-width: 786px)">
+    	<source srcset="https://dummyimage.com/1920x1080/35eb15/d6d7e8.jpg" media="(max-width: 1080px)">
+    	<img src="https://dummyimage.com/2560x1600/ebb915/d6d7e8.jpg" style="width:100%;">
+    </picture> 
+    </div>
+<table>
+    <thead>
+      <tr>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Zawód</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Imie">Jan</td>
+        <td data-label="Nazwisko">Kowalski</td>
+        <td data-label="Zawód">Hydraulik</td>
+      </tr>
+      <tr>
+        <td data-label="Imie">Piotr</td>
+        <td data-label="Nazwisko">Nowak</td>
+        <td data-label="Zawód">Motorniczy</td>
+      </tr>
+      <tr>
+        <td data-label="Imie">Bartosz</td>
+        <td data-label="Nazwisko">Kiełbasa</td>
+        <td data-label="Zawód">Fizyk</td>
+      </tr>
+      <tr>
+        <td data-label="Imie">Cezary</td>
+        <td data-label="Nazwisko">Kleczyński</td>
+        <td data-label="Zawód">Informatyk</td>
+      </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
